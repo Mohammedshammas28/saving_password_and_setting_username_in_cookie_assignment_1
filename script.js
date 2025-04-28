@@ -20,4 +20,19 @@ document.addEventListener('DOMContentLoaded', function() {
   // 4. Display the count on the webpage
 
   // your code here
+
+
+  
+  let count = getCookie('count');
+  if (count) {
+    count = parseInt(count) + 1;
+  } else {
+    count = 1;
+  }
+
+  setCookie('count', count); 
+
+  const countDisplay = document.getElementById('countDisplay');
+  countDisplay.textContent = 'Your cookies count is  ' + count ;
+  
 });
